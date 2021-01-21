@@ -77,18 +77,54 @@ def solution_D(A):
 
 
 # ex =[3, 1, 2, 4, 3, 8,9,23, 67,90,87];
+# ex = [3, 1, 2, 4, 3, 8,9,23, 67,90,87, 89,74,56,29,91,46,73];
 # ex = [0] * 100000; #Performance test array
 
 
-
-
-
-
-
 # print(solution(ex)); # Test solution A
-
 # print(solution_B(ex)); #Test solution B
-
 # print(solution_C(ex)); #Test solution C
-
 # print(solution_D(ex)); #Test solution D
+
+
+#TEST correctness
+import unittest
+class TapeEquilibrium(unittest.TestCase):
+
+    def test_solution(self):
+        input1 =  [3, 1, 2, 4, 3, 8,9,23, 67,90,87];
+        input2 =  [3, 1, 2, 4, 3, 8,9,23, 67,90,87, 89,74,56,29,91,46,73];
+        missing1 = solution(input1);
+        missing2 = solution(input2);
+        self.assertEqual(missing1,57,'Should be 57');
+        self.assertEqual(missing2,17,'Should be 17');
+
+        
+    def test_solution_B(self):
+        input1 =  [3, 1, 2, 4, 3, 8,9,23, 67,90,87];
+        input2 =  [3, 1, 2, 4, 3, 8,9,23, 67,90,87, 89,74,56,29,91,46,73];
+        missing1 = solution_B(input1);
+        missing2 = solution_B(input2);
+        self.assertEqual(missing1,57,'Should be 57');
+        self.assertEqual(missing2,17,'Should be 17');
+
+        
+    def test_solution_C(self):
+        input1 =  [3, 1, 2, 4, 3, 8,9,23, 67,90,87];
+        input2 =  [3, 1, 2, 4, 3, 8,9,23, 67,90,87, 89,74,56,29,91,46,73];
+        missing1 = solution_C(input1);
+        missing2 = solution_C(input2);
+        self.assertEqual(missing1,57,'Should be 57');
+        self.assertEqual(missing2,17,'Should be 17');
+
+    def test_solution_D(self):
+        input1 =  [3, 1, 2, 4, 3, 8,9,23, 67,90,87];
+        input2 =  [3, 1, 2, 4, 3, 8,9,23, 67,90,87, 89,74,56,29,91,46,73];
+        missing1 = solution_D(input1);
+        missing2 = solution_D(input2);
+        self.assertEqual(missing1,57,'Should be 57');
+        self.assertEqual(missing2,17,'Should be 17');
+
+
+if __name__=='__main__':
+    unittest.main();

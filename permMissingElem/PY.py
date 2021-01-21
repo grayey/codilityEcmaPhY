@@ -140,11 +140,53 @@ def solution_X(B):
 
 
 
-X =  [1,2,3,5]
+# X =  [1,2,3,5]
 
 
-print(solution_A(X))
-print(solution_B(X))
-print(solution_C(X))
-print(solution_D(X))
-print(solution_X(X))
+# print(solution_A(X))
+# print(solution_B(X))
+# print(solution_C(X))
+# print(solution_D(X))
+# print(solution_X(X))
+
+#TEST correctness
+import unittest
+class PermMissingElem(unittest.TestCase):
+
+    def test_solution_A(self):
+        input1 =  [1,2,3,5];
+        input2 =  [1,2,3,4,5];
+        missing1 = solution_A(input1);
+        missing2 = solution_A(input2);
+        self.assertEqual(missing1,4,'Should be 4');
+        self.assertEqual(missing2,6,'Should be 6');
+
+        
+    def test_solution_B(self):
+        input1 =  [1,2,3,5];
+        input2 =  [1,2,3,4,5];
+        missing1 = solution_B(input1);
+        missing2 = solution_B(input2);
+        self.assertEqual(missing1,4,'Should be 4');
+        self.assertEqual(missing2,6,'Should be 6');
+
+        
+    def test_solution_C(self):
+        input1 =  [1,2,3,5];
+        input2 =  [1,2,3,4,5];
+        missing1 = solution_C(input1);
+        missing2 = solution_C(input2);
+        self.assertEqual(missing1,4,'Should be 4');
+        self.assertEqual(missing2,6,'Should be 6');
+
+    def test_solution_D(self):
+        input1 =  [1,2,3,5];
+        input2 =  [1,2,3,4,5];
+        missing1 = solution_D(input1);
+        missing2 = solution_D(input2);
+        self.assertEqual(missing1,4,'Should be 4');
+        self.assertEqual(missing2,6,'Should be 6');
+
+
+if __name__=='__main__':
+    unittest.main();
